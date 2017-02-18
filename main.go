@@ -103,7 +103,7 @@ type weatherUnderground struct {
 }
 
 func (w weatherUnderground) temperature(city string) (float64, error) {
-	resp, err := http.Get("http://api.wunderground.com/api/" + w.apiKey + "/conditions/q/" + city + ".json")
+	resp, err := http.Get("https://api.wunderground.com/api/" + w.apiKey + "/conditions/q/" + city + ".json")
 	if err != nil {
 		return 0, err
 	}
